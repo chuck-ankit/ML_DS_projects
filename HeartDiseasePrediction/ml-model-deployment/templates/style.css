@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    background-color: #1e7592;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3f00d1;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 48%;
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+input[type="reset"] {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    filter: brightness(90%);
+}
+
+section {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2{
+    color: #1e7592;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+h3{
+    color: #399c9cec;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    align-items: start;
+}
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Style the headings */
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+/* Style paragraphs */
+p {
+    font-size: 18px;
+}
+
+/* Additional styles for about section */
+.about-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.about-content h2 {
+    color: #1e7592;
+}
+
+.about-content p {
+    color: #333;
+}
+
+.about-content h3 {
+    color: #1e7592;
+    margin-top: 20px;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
