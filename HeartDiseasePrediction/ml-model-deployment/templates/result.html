@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1e7592;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3f00d1;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            display: inline-block;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        input[type="reset"] {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            filter: brightness(90%);
+        }
+
+        section {
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+        }
+
+        h2 {
+            color: #1e7592;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #399c9cec;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: left;
+            align-items: start;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .result-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Adjust the margin as needed */
+            margin-bottom: 20px; /* Adjust the margin as needed */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-label {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .result-value {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">BeatWise</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>CardioRisk Analytics</h1>
+    <div class="result-container">
+        <h2>Hello, {{ Name }}!</h2>
+        <p>The patient has a {{ prediction }} chance of heart disease.</p>
+        <div class="result-details">
+            <p class="result-label">Report Date:</p>
+            <p id="realtime-date" class="result-value"></p>
+            <script>
+                function updateDate() {
+                    var currentDate = new Date();
+                    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    var formattedDate = currentDate.toLocaleDateString('en-US', options);
+                    document.getElementById('realtime-date').innerText = formattedDate;
+                }
+                updateDate();
+                setInterval(updateDate, 1000);
+            </script>
+        </div>
+    </div>
+    <br><br><br>
+
+    <section id="about">
+        <h2>About BeatWise: Your Heart Health Companion</h2>
+        <p>
+            BeatWise is a revolutionary heart disease prediction model designed to empower you with insights about your heart health. Built on cutting-edge machine learning and data science, BeatWise leverages the power of Python and popular libraries like numpy, pandas, matplotlib, and sklearn to analyze your personal data and provide you with a personalized risk assessment.
+        </p>
+
+        <h3>Our Mission:</h3>
+        <p>
+            We believe everyone deserves access to clear, actionable information about their heart health. BeatWise aims to bridge the gap between complex medical data and accessible, user-friendly insights. By demystifying heart disease risk, we empower individuals to make informed decisions and take proactive steps towards a healthier future.
+        </p>
+
+        <h3>How BeatWise Works:</h3>
+        <p>
+            Through our user-friendly web application, you can securely input relevant health data. BeatWise then utilizes its advanced algorithms to analyze this information, drawing insights from a comprehensive range of models including Logistic Regression, KNN, SVM, Decision Tree, Random Forest, Gradient Boosting, and XGBoost. The model we've carefully selected for deployment offers the highest accuracy and reliability, ensuring you receive the most dependable assessment possible.
+        </p>
+
+        <h3>Benefits of BeatWise:</h3>
+        <p>
+            We believe in the power of knowledge and collaboration to improve heart health outcomes for all. By joining the BeatWise community, you'll gain access to valuable resources, connect with other users on a similar journey, and stay informed about the latest advancements in heart disease prevention. BeatWise is more than just a heart disease prediction model. It's your trusted partner in taking charge of your heart health.
+        </p>
+    </section>
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries or assistance.</p>
+
+            <ul>
+                <li>Phone: <span class="contact-detail">+91 9057798641</span></li>
+                <li>Email: <span class="contact-detail">ankitkumar9864@gmail.com</span></li>
+                <li>Address: <span class="contact-detail">GALGOTIAS UNIVERSITY., Greater Noida, Uttar Pradesh, India</span></li>
+            </ul>
+        </div>
+    </section>
+</main>
+</body>
+</html>

@@ -1,18 +1,24 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+import warnings
 
-
-model = pickle.load(open('ml-model-deployment\BeatWise.plk','rb'))
+warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
 
 app = Flask(__name__)
+
+# Load the pre-trained model
+model_path = 'BeatWise.plk'
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict_heart_diseases():
+    # Get user inputs from the form
     Name = request.form.get('Name')
     Age = int(request.form.get('Age'))
     Sex = int(request.form.get('Sex'))
@@ -27,11 +33,23 @@ def predict_heart_diseases():
     slope = int(request.form.get('slope'))
     ca = int(request.form.get('ca'))
     thal = int(request.form.get('thal'))
-    
-    #prediction
-    result = model.rfc.predict(np.array([Age,Sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]).reshape(1,13))
 
-    return str(result)
+    # Make a prediction using the loaded model
+    input_data = np.array([Age, Sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]).reshape(1, 13)
+    result = model.predict(input_data)
+
+    # Map numeric result to labels
+    if result[0] == 0:
+        prediction_label = "Low"
+    elif result[0] == 1:
+        prediction_label = "High"
+    else:
+        prediction_label = "Unknown"
+
+    # Render a new template with the prediction result
+    return render_template('result.html', Name=Name, prediction=prediction_label)
+
 if __name__ == '__main__':
-      app.run(debug=True)
-      
+    # Run the Flask application in debug mode
+    app.run(debug=True)
+    # app.run(host='0.0.0.0',port=8080)
