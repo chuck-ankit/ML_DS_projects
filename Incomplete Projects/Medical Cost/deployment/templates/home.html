@@ -1,0 +1,146 @@
+<hrml>
+    <head>
+        <title>Insurance Data</title>
+    </head>
+    <style>
+    html{
+            height: 100%;
+        }
+
+    body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(#141e30,#243b55);
+        }
+    header {
+        color: #fff; /* Text color */
+        padding: 20px; /* Padding around content */
+        text-align: center; /* Center align text */
+    }
+
+    header h1 {
+            margin: 40px auto 20px;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            text-decoration: dashed;
+
+        }
+
+    .section1{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    text-align: center; /* Center aligning the form */
+        }
+
+        /* Adjusted margin for h3 */
+    .section1 h3{
+            margin: 0 0 20px; /* Changed margin */
+            color: #fff;
+        }
+
+        /* Adjusted position of labels */
+    .section1 .user-box label{
+            display: block; /* Changed from absolute to block */
+            margin-bottom: 5px; /* Added margin */
+            margin-left: 20px;
+            color: #fff;
+            text-align: left;
+        }
+
+        /* Removed absolute positioning for input elements */
+    .section1 .user-box input,
+    .section1 .user-box select {
+            width: calc(100% - 20px); /* Adjusted width to accommodate for padding */
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 20px; /* Reduced margin */
+            border: none;
+            border-radius: 5px; /* Added border-radius */
+            outline: none;
+            background: transparent;
+        }
+
+        /* Adjusted styling for the submit button */
+    .section1 input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 5px; /* Added border-radius */
+            outline: none;
+            background: #03e9f4; /* Changed background color */
+            cursor: pointer;
+            transition: background 0.3s ease; /* Added transition effect */
+        }
+
+        /* Adjusted styling for the submit button hover effect */
+    .section1 input[type="submit"]:hover {
+            background: #0b7dda; /* Changed hover background color */
+        }
+
+        /* Removed unnecessary styles for the anchor tag */
+    .section1 a {
+            display: inline-block; /* Removed unnecessary styles */
+            text-decoration: none; /* Removed unnecessary styles */
+            margin-top: 20px; /* Adjusted margin */
+        }
+
+    </style>
+    <body>
+        <header>
+            <h1>Predict insurance bill</h1>
+        </header>
+        <div class="section1">
+            <h3><b>
+            Insurance Price Prediction
+            </b></h3>
+            <form action="#">
+                <div class="user-box">
+                <label for="Cname"> Name: </label><br>
+                <input type="text" id="Cname" name="Cname" placeholder="Given Name" required><br>
+                <label for="age"> Age: </label><br>
+                <input type="number" min="0" max="125" id="age" name="age" placeholder="Age" required><br>
+                <label for="sex"> Gender: </label><br>
+                <select name="sex" id="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female" selected>Female</option>
+                </select><br>
+                <label for ="bmi"> BMI: </label><br>
+                <input type="number" min="0" placeholder="BMI" name="bmi" id=bmi required><br>
+                <label for ="children"> No of Children: </label><br>
+                <input type="number" min="0" name="children" id="children" placeholder="Children" required><br>
+                <label for="smoker"> Smoker: </label><br>
+                <select name="smoker" id="smoker" required>
+                    <option value="yes">Yes</option>
+                    <option value="no" selected>No</option>
+                </select><br>
+                <label for="region"> Region: </label><br>
+                <select name="region" id="region">
+                    <option value="southwest">SouthWest</option>
+                    <option value="southeast">SouthEast</option>
+                    <option value="northeast">NorthEast</option>
+                    <option value="northwest">NorthWest</option>
+                </select><br>
+                </div>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <input type="submit" value="Submit" method="POST">
+                </a>
+                
+            </form>
+        </div>
+    </body>
+</hrml>
