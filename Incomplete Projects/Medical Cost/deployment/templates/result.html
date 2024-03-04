@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Prediction Result</title>
+    <style>
+    html{
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: linear-gradient(#141e30,#243b55);
+        color: #fff;
+    }
+
+    header {
+        color: #fff; /* Text color */
+        padding: 20px; /* Padding around content */
+        text-align: center; /* Center align text */
+    }
+
+    header h1 {
+        margin: 40px auto 20px;
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+        text-decoration: dashed;
+    }
+
+    .section1{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        padding: 40px;
+        background: rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        text-align: center; /* Center aligning the form */
+    }
+
+    .section1 h3{
+        margin: 0 0 20px; /* Changed margin */
+        color: #fff;
+    }
+
+    .section1 .result-box{
+        margin-top: 20px;
+    }
+
+    .section1 .result-box label{
+        display: block; /* Changed from absolute to block */
+        margin-bottom: 5px; /* Added margin */
+        color: #fff;
+        text-align: left;
+    }
+
+    .section1 .result-box p{
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .section1 a {
+        display: inline-block; /* Removed unnecessary styles */
+        text-decoration: none; /* Removed unnecessary styles */
+        margin-top: 20px; /* Adjusted margin */
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Insurance Prediction Result</h1>
+    </header>
+    <div class="section1">
+        <h3><b>Estimated Insurance Cost</b></h3>
+        <div class="result-box">
+            <label for="estimated-cost">Estimated Cost:</label>
+            <p>{{ prediction }}</p>
+        </div>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
