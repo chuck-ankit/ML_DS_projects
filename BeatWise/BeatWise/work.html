@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles_work.css">
+    <link rel="shortcut icon" href="static/android-chrome-512x512.png" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <div id="page1">
+            <nav>
+                <img src="static/main-logo-transparent.png" alt="logo" width="250" height="250">
+                <div id="nav-part2">
+                    <h4><a href="index.html">Home</a></h4>
+                    <h4><a href="about.html">About</a></h4>
+                    <h4><a href="work.html">Work</a></h4>
+                    <h4><a href="team.html">Team</a></h4>
+                    <h4><a href="blog.html">Blog</a></h4>
+                    <h4><a href="https://github.com/chuck-ankit/ML_DS_projects/tree/main/Finished%20Projects/HeartDiseasePrediction/ml-model-deployment">Code</a></h4>
+                    <h4><a href="contact.html">Contact</a></h4>
+                </div>
+            </nav>
+        </div>
+
+    <div id="work">
+    <main>
+        <form>
+            <label for="Name">Name :</label>
+            <input type="text" id="Name" name="Name" required><br><br>
+    
+            <label for="Age">Age :</label>
+            <input type="number" max=120 min=0 id="Age" name="Age" required><br><br>
+    
+            <label for="Sex">Gender :</label>
+            <Select id="Sex" name="Sex" required>
+                <option selected value="1">Male</option>
+                <option value="0">Female</option>
+            </Select><br><br>
+    
+            <label for="cp">Chestpain Value :</label>
+            <Select id="cp" name="cp" required>
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </Select>
+    
+            <label for="trestbps">Resting Blood Pressure (in mm Hg on admission to the hospital) :</label>
+            <input type="number" min=90 max=210 id="trestbps" name="trestbps" required><br><br>
+            <label for="chol">Serum Cholestoral in mg/dl :</label>
+            <input type="number" min=120 max=570 id="chol" name="chol" required><br><br>
+            <label for="fbs">Fasting Blood Sugar &gt; 120 mg/dl (1 = true; 0 = false):</label>
+            <Select id="fbs" name="fbs" required>
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+            </Select><br><br>
+            <label id="restecg">Resting Electrocardiographic Results :</label>
+            <Select id="restecg" name="restecg" required>
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </Select><br><br>
+            <label id="thalach">Maximum Heart rate achieved :</label>
+            <input type="number" min=60 max=210 id="thalach" name="thalach" required><br><br>
+            <label id="exang">Exercise induced angina (1 = yes; 0 = no):</label>
+            <select id="exang" name="exang" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label for="oldpeak">ST depression induced by exercise relative to rest :</label>
+            <input type="number" min=0 max=7 id="oldpeak" name="oldpeak" required><br><br>
+            <label for="slope">The slope of the peak exercise ST segment :</label>
+            <select id="slope" name="slope" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select><br><br>
+            <label for="ca">Number of major vessels (0-3) colored by flourosopy :</label>
+            <select id="ca" name="ca" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br><br>
+            <label for="thal">Thal:</label>
+            <select id="thal" name="thal" required>
+                <option value="1">Normal</option>
+                <option value="2">Fixed defect</option>
+                <option value="3">Reversable defect</option>
+            </select><br><br>
+            <input type="submit" herf="index.html">
+            <input type="reset" value="Clear">
+       </form>
+
+        <br><br><br>
+
+        <section id="contact">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>Feel free to reach out to us for any inquiries or assistance.</p>
+
+                <ul>
+                    <li>Phone: <span class="contact-detail">+91 9057798641</span></li>
+                    <li>Email: <span class="contact-detail">ankitkumar9864@gmail.com</span></li>
+                    <li>Address: <span class="contact-detail">GALGOTIAS UNIVERSITY, Greater Noida, Uttar Pradesh, India</span></li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <ul class="socials">
+                    <li><a href="#"><img src="static/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="static/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="static/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a href="#"><img src="static/instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 BeatWise. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

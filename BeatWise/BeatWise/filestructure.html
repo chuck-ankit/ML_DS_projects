@@ -1,0 +1,22 @@
+Flowchart representing the flow of the BeatWise program:
+
+
+    A[Start] --> B[User accesses BeatWise web application];
+    B --> C{User inputs health data};
+    C -->|Yes| D[Data preprocessing and validation];
+    C -->|No| E[Display error message and prompt for valid input];
+    E --> C;
+    D --> F[Data stored in database];
+    F --> G[Machine learning model predicts heart disease risk];
+    G --> H{Risk level determined};
+    H -->|Low| I[Display low risk message and preventive recommendations];
+    H -->|Moderate| J[Display moderate risk message and lifestyle modification suggestions];
+    H -->|High| K[Display high risk message and recommend medical consultation];
+    I --> L[Store prediction result in database];
+    J --> L;
+    K --> L;
+    L --> M[Display personalized insights and recommendations];
+    M --> N{User requests more information};
+    N -->|Yes| O[Display educational resources and blog posts];
+    N -->|No| P[End];
+    O --> P;

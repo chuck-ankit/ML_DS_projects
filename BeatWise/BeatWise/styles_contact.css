@@ -1,0 +1,178 @@
+@font-face {
+    font-family: neu;
+    src: url(fonts/NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(fonts/NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 200;
+    src: url(fonts/NeueHaasDisplayRoman.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    z-index: 10;
+    background-color: #EFEAE3;
+}
+
+#page1 {
+    min-height: 20vh;
+    width: 100%;
+    padding: 0 2vw;
+}
+
+nav {
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a {
+    color: #fff;
+}
+
+#contact-section {
+    min-height: 80vh;
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-section h1 {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+}
+
+#contact-section form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+#contact-section form input,
+#contact-section form textarea {
+    padding: 1vw;
+    border: 1px solid #0000003c;
+    border-radius: 5px;
+    font-size: 1.2vw;
+}
+
+#contact-section form textarea {
+    height: 15vh;
+    resize: none;
+}
+
+#contact-section form button {
+    padding: 1vw 2vw;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-section form button:hover {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    #contact-section form {
+        width: 80%;
+    }
+
+    #contact-section form input,
+    #contact-section form textarea {
+        font-size: 4vw;
+    }
+
+    #contact-section form button {
+        font-size: 4vw;
+    }
+}
+.footer-content .socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Adjust the gap between icons as needed */
+    justify-content: center;
+}
+
+.footer-content .socials li {
+    display: inline-block;
+}
+
+.footer-content .socials li a img {
+    width: 24px; /* Set the desired width for the icons */
+    height: 24px; /* Set the desired height for the icons */
+    object-fit: cover; /* Ensures the image fits within the dimensions */
+}
